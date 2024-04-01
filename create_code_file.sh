@@ -38,4 +38,19 @@ if [ "$found" = true ]; then
     done
 else
     echo "$1ku文件夹不存在"
+    exit
 fi
+
+
+val="# url\n
+\`\`\` shell\n[$2]()\n
+\`\`\`\n
+# Chinese\n
+\`\`\` shell\n\n
+\`\`\`\n\n
+# English\n
+\`\`\` shell\n\n
+\`\`\` 
+"
+
+echo $val >> $2/$2.md
