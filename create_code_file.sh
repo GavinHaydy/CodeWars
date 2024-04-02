@@ -43,8 +43,7 @@ fi
 
 
 val="# url\n
-\`\`\` shell\n[$2]()\n
-\`\`\`\n
+[$2]()\n
 # Chinese\n
 \`\`\` shell\n\n
 \`\`\`\n\n
