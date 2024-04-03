@@ -52,4 +52,23 @@ val="# url\n
 \`\`\` 
 "
 
+go_java_js_ts="/*\tbest\n*/"
+
+py_doc="\"\"\" best\n
+\"\"\"
+"
+
 echo $val >> $2/$2.md
+
+for element in "${lau[@]}"; do
+    if [ "$element" == ".md" ];then
+        echo 1
+        continue
+    elif [ "$element" == ".py" ];then
+        echo 2
+        echo $py_doc >> $2/$2.py
+    else
+        echo 3
+        echo $go_java_js_ts >> $2/$2$element    
+    fi
+done
