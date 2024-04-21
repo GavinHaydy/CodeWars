@@ -115,4 +115,19 @@ print(decode("atC5kcOuKAr!"))
 #         print(i)
 
 """ best
+def decode(s):
+    decrypted_message = ''
+    i = 0
+    key = "bdhpF,82QsLirJejtNmzZKgnB3SwTyXG ?.6YIcflxVC5WE94UA1OoD70MkvRuPqHa"
+
+    for char in s:
+        i += 1
+        if char not in key:
+            decrypted_message += char
+            continue
+            
+        idx = (key.index(char) - i) % 66
+        decrypted_message += key[idx]
+        
+    return decrypted_message
  """
